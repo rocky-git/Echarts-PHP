@@ -1,5 +1,5 @@
 {
-    "name": "hisune/echarts-php",
+    "name": "rockys/echarts-php",
     "type": "library",
     "description": "A php wrapper for echarts javascript libraries",
     "keywords": ["echarts", "php", "charts", "javascript"],
