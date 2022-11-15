@@ -24,12 +24,12 @@ class Property implements \ArrayAccess
         return $this->offsetGet($offset);
     }
 
-    public function offsetExists($offset): bool
+    public function offsetExists($offset)
     {
         return isset($this->_options[$offset]);
     }
 
-    public function offsetGet($offset): mixed
+    public function offsetGet($offset)
     {
         if (!$this->offsetExists($offset))
             $this->_options[$offset] = new self;
@@ -38,7 +38,7 @@ class Property implements \ArrayAccess
     }
 
 
-    public function offsetSet($offset, $value): void
+    public function offsetSet($offset, $value)
     {
         if (is_null($offset))
             $this->_options[] = $value;
@@ -46,7 +46,7 @@ class Property implements \ArrayAccess
             $this->_options[$offset] = $value;
     }
 
-    public function offsetUnset($offset): void
+    public function offsetUnset($offset)
     {
         unset($this->_options[$offset]);
     }
